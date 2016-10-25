@@ -1,4 +1,5 @@
 // Create a collection named orders.
+> db.createCollection("orders")
 > db.orders
 
 // Insert at least 3 documents that represent an order. IMPORTANT: See section below for fields.
