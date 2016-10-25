@@ -22,6 +22,7 @@
 > db.orders.find({$and: [{"lineItems.quantity": {$lt: 50}}, {"lineItems.quantity": {$gt: 5}}]})
 
 // Update one of your line items to 42.99. HINT: Look at dot notation
-
+> db.orders.update({"lineItems.productName": /popcorn/}, {$set: {"lineItems.$.unitPrice": 42.99}})
 
 // Remove one of your orders.
+> db.orders.remove({"lineItems.unitPrice": 42.99})
